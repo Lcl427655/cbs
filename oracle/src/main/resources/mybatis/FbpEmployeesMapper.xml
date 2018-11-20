@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cbs.app.dao.FbpEmployeesMapper" >
+  <resultMap id="BaseResultMap" type="com.cbs.app.entity.FbpEmployees" >
+    <id column="EMPLOYEE_ID" property="employeeId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="DECIMAL" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATE_LOGIN" property="lastUpdateLogin" jdbcType="DECIMAL" />
+    <result column="EMPLOYEE_NUMBER" property="employeeNumber" jdbcType="VARCHAR" />
+    <result column="DEPT_ID" property="deptId" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="CHECK_UNIT" property="checkUnit" jdbcType="VARCHAR" />
+    <result column="PROD_PROJECT_ID" property="prodProjectId" jdbcType="DECIMAL" />
+    <result column="COST_DEPT_ID" property="costDeptId" jdbcType="DECIMAL" />
+    <result column="CURRENT_CREDIT" property="currentCredit" jdbcType="DECIMAL" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="POSITION_LEVEL" property="positionLevel" jdbcType="VARCHAR" />
+    <result column="EMPLOYEE_TYPE" property="employeeType" jdbcType="VARCHAR" />
+    <result column="SOURCE_SYSTEM" property="sourceSystem" jdbcType="VARCHAR" />
+    <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR" />
+    <result column="EXCHANGE_PERSON_FLAG" property="exchangePersonFlag" jdbcType="VARCHAR" />
+    <result column="EMPLOYEE_GUID" property="employeeGuid" jdbcType="VARCHAR" />
+    <result column="SYNCH_FLAG" property="synchFlag" jdbcType="VARCHAR" />
+    <result column="USE_OA_FLAG" property="useOaFlag" jdbcType="VARCHAR" />
+    <result column="USE_EMAIL_FLAG" property="useEmailFlag" jdbcType="VARCHAR" />
+    <result column="USE_SMS_FLAG" property="useSmsFlag" jdbcType="VARCHAR" />
+    <result column="REJECT_SMS_FLAG" property="rejectSmsFlag" jdbcType="VARCHAR" />
+    <result column="MON_NOTICE_FLAG" property="monNoticeFlag" jdbcType="VARCHAR" />
+    <result column="TUE_NOTICE_FLAG" property="tueNoticeFlag" jdbcType="VARCHAR" />
+    <result column="WED_NOTICE_FLAG" property="wedNoticeFlag" jdbcType="VARCHAR" />
+    <result column="THU_NOTICE_FLAG" property="thuNoticeFlag" jdbcType="VARCHAR" />
+    <result column="FRI_NOTICE_FLAG" property="friNoticeFlag" jdbcType="VARCHAR" />
+    <result column="SAT_NOTICE_FLAG" property="satNoticeFlag" jdbcType="VARCHAR" />
+    <result column="SUN_NOTICE_FLAG" property="sunNoticeFlag" jdbcType="VARCHAR" />
+    <result column="START_HOUR" property="startHour" jdbcType="DECIMAL" />
+    <result column="START_MIN" property="startMin" jdbcType="DECIMAL" />
+    <result column="END_HOUR" property="endHour" jdbcType="DECIMAL" />
+    <result column="END_MIN" property="endMin" jdbcType="DECIMAL" />
+    <result column="OA_ADDRESS" property="oaAddress" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="MOBILE_PHONE" property="mobilePhone" jdbcType="VARCHAR" />
+    <result column="EMAIL_ADDRESS" property="emailAddress" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_CATEGORY" property="attributeCategory" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE1" property="attribute1" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE2" property="attribute2" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE3" property="attribute3" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE4" property="attribute4" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE5" property="attribute5" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE6" property="attribute6" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE7" property="attribute7" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE8" property="attribute8" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE9" property="attribute9" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE10" property="attribute10" jdbcType="VARCHAR" />
+    <result column="IS_SYNCH_REQUIRED" property="isSynchRequired" jdbcType="VARCHAR" />
+    <result column="ENABLED_FLAG" property="enabledFlag" jdbcType="VARCHAR" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="VARCHAR" />
+    <result column="SOURCE_REFERENCE" property="sourceReference" jdbcType="VARCHAR" />
+    <result column="SYSNCE_DATE" property="sysnceDate" jdbcType="TIMESTAMP" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+    <result column="APPROVE_OA_FLAG" property="approveOaFlag" jdbcType="VARCHAR" />
+    <result column="APPROVE_EMAIL_FLAG" property="approveEmailFlag" jdbcType="VARCHAR" />
+    <result column="APPROVE_SMS_FLAG" property="approveSmsFlag" jdbcType="VARCHAR" />
+    <result column="AMON_NOTICE_FLAG" property="amonNoticeFlag" jdbcType="VARCHAR" />
+    <result column="ATUE_NOTICE_FLAG" property="atueNoticeFlag" jdbcType="VARCHAR" />
+    <result column="AWED_NOTICE_FLAG" property="awedNoticeFlag" jdbcType="VARCHAR" />
+    <result column="ATHU_NOTICE_FLAG" property="athuNoticeFlag" jdbcType="VARCHAR" />
+    <result column="AFRI_NOTICE_FLAG" property="afriNoticeFlag" jdbcType="VARCHAR" />
+    <result column="ASAT_NOTICE_FLAG" property="asatNoticeFlag" jdbcType="VARCHAR" />
+    <result column="ASUN_NOTICE_FLAG" property="asunNoticeFlag" jdbcType="VARCHAR" />
+    <result column="ASTART_HOUR" property="astartHour" jdbcType="DECIMAL" />
+    <result column="ASTART_MIN" property="astartMin" jdbcType="DECIMAL" />
+    <result column="AEND_HOUR" property="aendHour" jdbcType="DECIMAL" />
+    <result column="AEND_MIN" property="aendMin" jdbcType="DECIMAL" />
+    <result column="OTHER_OA_FLAG" property="otherOaFlag" jdbcType="VARCHAR" />
+    <result column="OTHER_EMAIL_FLAG" property="otherEmailFlag" jdbcType="VARCHAR" />
+    <result column="OTHER_SMS_FLAG" property="otherSmsFlag" jdbcType="VARCHAR" />
+    <result column="OMON_NOTICE_FLAG" property="omonNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OTUE_NOTICE_FLAG" property="otueNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OWED_NOTICE_FLAG" property="owedNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OTHU_NOTICE_FLAG" property="othuNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OFRI_NOTICE_FLAG" property="ofriNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OSAT_NOTICE_FLAG" property="osatNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OSUN_NOTICE_FLAG" property="osunNoticeFlag" jdbcType="VARCHAR" />
+    <result column="OSTART_HOUR" property="ostartHour" jdbcType="DECIMAL" />
+    <result column="OSTART_MIN" property="ostartMin" jdbcType="DECIMAL" />
+    <result column="OEND_HOUR" property="oendHour" jdbcType="DECIMAL" />
+    <result column="OEND_MIN" property="oendMin" jdbcType="DECIMAL" />
+    <result column="PASSWORD_OA_FLAG" property="passwordOaFlag" jdbcType="VARCHAR" />
+    <result column="PASSWORD_EMAIL_FLAG" property="passwordEmailFlag" jdbcType="VARCHAR" />
+    <result column="PASSWORD_SMS_FLAG" property="passwordSmsFlag" jdbcType="VARCHAR" />
+    <result column="BOE_OA_FLAG" property="boeOaFlag" jdbcType="VARCHAR" />
+    <result column="BOE_EMAIL_FLAG" property="boeEmailFlag" jdbcType="VARCHAR" />
+    <result column="BOE_SMS_FLAG" property="boeSmsFlag" jdbcType="VARCHAR" />
+    <result column="LOCK_DATE" property="lockDate" jdbcType="TIMESTAMP" />
+    <result column="FEE_TYPE_IDS" property="feeTypeIds" jdbcType="VARCHAR" />
+    <result column="FEE_TYPE_NAMES" property="feeTypeNames" jdbcType="VARCHAR" />
+    <result column="TEMP_FLAG" property="tempFlag" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    EMPLOYEE_ID, LAST_UPDATE_DATE, LAST_UPDATED_BY, CREATION_DATE, CREATED_BY, LAST_UPDATE_LOGIN, 
+    EMPLOYEE_NUMBER, DEPT_ID, JOB_ID, CHECK_UNIT, PROD_PROJECT_ID, COST_DEPT_ID, CURRENT_CREDIT, 
+    PASSWORD, POSITION_LEVEL, EMPLOYEE_TYPE, SOURCE_SYSTEM, SHORT_NAME, EXCHANGE_PERSON_FLAG, 
+    EMPLOYEE_GUID, SYNCH_FLAG, USE_OA_FLAG, USE_EMAIL_FLAG, USE_SMS_FLAG, REJECT_SMS_FLAG, 
+    MON_NOTICE_FLAG, TUE_NOTICE_FLAG, WED_NOTICE_FLAG, THU_NOTICE_FLAG, FRI_NOTICE_FLAG, 
+    SAT_NOTICE_FLAG, SUN_NOTICE_FLAG, START_HOUR, START_MIN, END_HOUR, END_MIN, OA_ADDRESS, 
+    PHONE, MOBILE_PHONE, EMAIL_ADDRESS, ATTRIBUTE_CATEGORY, ATTRIBUTE1, ATTRIBUTE2, ATTRIBUTE3, 
+    ATTRIBUTE4, ATTRIBUTE5, ATTRIBUTE6, ATTRIBUTE7, ATTRIBUTE8, ATTRIBUTE9, ATTRIBUTE10, 
+    IS_SYNCH_REQUIRED, ENABLED_FLAG, SOURCE_TYPE, SOURCE_REFERENCE, SYSNCE_DATE, ID_CARD, 
+    APPROVE_OA_FLAG, APPROVE_EMAIL_FLAG, APPROVE_SMS_FLAG, AMON_NOTICE_FLAG, ATUE_NOTICE_FLAG, 
+    AWED_NOTICE_FLAG, ATHU_NOTICE_FLAG, AFRI_NOTICE_FLAG, ASAT_NOTICE_FLAG, ASUN_NOTICE_FLAG, 
+    ASTART_HOUR, ASTART_MIN, AEND_HOUR, AEND_MIN, OTHER_OA_FLAG, OTHER_EMAIL_FLAG, OTHER_SMS_FLAG, 
+    OMON_NOTICE_FLAG, OTUE_NOTICE_FLAG, OWED_NOTICE_FLAG, OTHU_NOTICE_FLAG, OFRI_NOTICE_FLAG, 
+    OSAT_NOTICE_FLAG, OSUN_NOTICE_FLAG, OSTART_HOUR, OSTART_MIN, OEND_HOUR, OEND_MIN, 
+    PASSWORD_OA_FLAG, PASSWORD_EMAIL_FLAG, PASSWORD_SMS_FLAG, BOE_OA_FLAG, BOE_EMAIL_FLAG, 
+    BOE_SMS_FLAG, LOCK_DATE, FEE_TYPE_IDS, FEE_TYPE_NAMES, TEMP_FLAG, MEMO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from FBP.FBP_EMPLOYEES
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from FBP.FBP_EMPLOYEES
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.cbs.app.entity.FbpEmployees" >
+    insert into FBP.FBP_EMPLOYEES (EMPLOYEE_ID, LAST_UPDATE_DATE, LAST_UPDATED_BY, 
+      CREATION_DATE, CREATED_BY, LAST_UPDATE_LOGIN, 
+      EMPLOYEE_NUMBER, DEPT_ID, JOB_ID, 
+      CHECK_UNIT, PROD_PROJECT_ID, COST_DEPT_ID, 
+      CURRENT_CREDIT, PASSWORD, POSITION_LEVEL, 
+      EMPLOYEE_TYPE, SOURCE_SYSTEM, SHORT_NAME, 
+      EXCHANGE_PERSON_FLAG, EMPLOYEE_GUID, SYNCH_FLAG, 
+      USE_OA_FLAG, USE_EMAIL_FLAG, USE_SMS_FLAG, 
+      REJECT_SMS_FLAG, MON_NOTICE_FLAG, TUE_NOTICE_FLAG, 
+      WED_NOTICE_FLAG, THU_NOTICE_FLAG, FRI_NOTICE_FLAG, 
+      SAT_NOTICE_FLAG, SUN_NOTICE_FLAG, START_HOUR, 
+      START_MIN, END_HOUR, END_MIN, 
+      OA_ADDRESS, PHONE, MOBILE_PHONE, 
+      EMAIL_ADDRESS, ATTRIBUTE_CATEGORY, ATTRIBUTE1, 
+      ATTRIBUTE2, ATTRIBUTE3, ATTRIBUTE4, 
+      ATTRIBUTE5, ATTRIBUTE6, ATTRIBUTE7, 
+      ATTRIBUTE8, ATTRIBUTE9, ATTRIBUTE10, 
+      IS_SYNCH_REQUIRED, ENABLED_FLAG, SOURCE_TYPE, 
+      SOURCE_REFERENCE, SYSNCE_DATE, ID_CARD, 
+      APPROVE_OA_FLAG, APPROVE_EMAIL_FLAG, APPROVE_SMS_FLAG, 
+      AMON_NOTICE_FLAG, ATUE_NOTICE_FLAG, AWED_NOTICE_FLAG, 
+      ATHU_NOTICE_FLAG, AFRI_NOTICE_FLAG, ASAT_NOTICE_FLAG, 
+      ASUN_NOTICE_FLAG, ASTART_HOUR, ASTART_MIN, 
+      AEND_HOUR, AEND_MIN, OTHER_OA_FLAG, 
+      OTHER_EMAIL_FLAG, OTHER_SMS_FLAG, OMON_NOTICE_FLAG, 
+      OTUE_NOTICE_FLAG, OWED_NOTICE_FLAG, OTHU_NOTICE_FLAG, 
+      OFRI_NOTICE_FLAG, OSAT_NOTICE_FLAG, OSUN_NOTICE_FLAG, 
+      OSTART_HOUR, OSTART_MIN, OEND_HOUR, 
+      OEND_MIN, PASSWORD_OA_FLAG, PASSWORD_EMAIL_FLAG, 
+      PASSWORD_SMS_FLAG, BOE_OA_FLAG, BOE_EMAIL_FLAG, 
+      BOE_SMS_FLAG, LOCK_DATE, FEE_TYPE_IDS, 
+      FEE_TYPE_NAMES, TEMP_FLAG, MEMO
+      )
+    values (#{employeeId,jdbcType=DECIMAL}, #{lastUpdateDate,jdbcType=TIMESTAMP}, #{lastUpdatedBy,jdbcType=DECIMAL}, 
+      #{creationDate,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=DECIMAL}, #{lastUpdateLogin,jdbcType=DECIMAL}, 
+      #{employeeNumber,jdbcType=VARCHAR}, #{deptId,jdbcType=DECIMAL}, #{jobId,jdbcType=DECIMAL}, 
+      #{checkUnit,jdbcType=VARCHAR}, #{prodProjectId,jdbcType=DECIMAL}, #{costDeptId,jdbcType=DECIMAL}, 
+      #{currentCredit,jdbcType=DECIMAL}, #{password,jdbcType=VARCHAR}, #{positionLevel,jdbcType=VARCHAR}, 
+      #{employeeType,jdbcType=VARCHAR}, #{sourceSystem,jdbcType=VARCHAR}, #{shortName,jdbcType=VARCHAR}, 
+      #{exchangePersonFlag,jdbcType=VARCHAR}, #{employeeGuid,jdbcType=VARCHAR}, #{synchFlag,jdbcType=VARCHAR}, 
+      #{useOaFlag,jdbcType=VARCHAR}, #{useEmailFlag,jdbcType=VARCHAR}, #{useSmsFlag,jdbcType=VARCHAR}, 
+      #{rejectSmsFlag,jdbcType=VARCHAR}, #{monNoticeFlag,jdbcType=VARCHAR}, #{tueNoticeFlag,jdbcType=VARCHAR}, 
+      #{wedNoticeFlag,jdbcType=VARCHAR}, #{thuNoticeFlag,jdbcType=VARCHAR}, #{friNoticeFlag,jdbcType=VARCHAR}, 
+      #{satNoticeFlag,jdbcType=VARCHAR}, #{sunNoticeFlag,jdbcType=VARCHAR}, #{startHour,jdbcType=DECIMAL}, 
+      #{startMin,jdbcType=DECIMAL}, #{endHour,jdbcType=DECIMAL}, #{endMin,jdbcType=DECIMAL}, 
+      #{oaAddress,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{mobilePhone,jdbcType=VARCHAR}, 
+      #{emailAddress,jdbcType=VARCHAR}, #{attributeCategory,jdbcType=VARCHAR}, #{attribute1,jdbcType=VARCHAR}, 
+      #{attribute2,jdbcType=VARCHAR}, #{attribute3,jdbcType=VARCHAR}, #{attribute4,jdbcType=VARCHAR}, 
+      #{attribute5,jdbcType=VARCHAR}, #{attribute6,jdbcType=VARCHAR}, #{attribute7,jdbcType=VARCHAR}, 
+      #{attribute8,jdbcType=VARCHAR}, #{attribute9,jdbcType=VARCHAR}, #{attribute10,jdbcType=VARCHAR}, 
+      #{isSynchRequired,jdbcType=VARCHAR}, #{enabledFlag,jdbcType=VARCHAR}, #{sourceType,jdbcType=VARCHAR}, 
+      #{sourceReference,jdbcType=VARCHAR}, #{sysnceDate,jdbcType=TIMESTAMP}, #{idCard,jdbcType=VARCHAR}, 
+      #{approveOaFlag,jdbcType=VARCHAR}, #{approveEmailFlag,jdbcType=VARCHAR}, #{approveSmsFlag,jdbcType=VARCHAR}, 
+      #{amonNoticeFlag,jdbcType=VARCHAR}, #{atueNoticeFlag,jdbcType=VARCHAR}, #{awedNoticeFlag,jdbcType=VARCHAR}, 
+      #{athuNoticeFlag,jdbcType=VARCHAR}, #{afriNoticeFlag,jdbcType=VARCHAR}, #{asatNoticeFlag,jdbcType=VARCHAR}, 
+      #{asunNoticeFlag,jdbcType=VARCHAR}, #{astartHour,jdbcType=DECIMAL}, #{astartMin,jdbcType=DECIMAL}, 
+      #{aendHour,jdbcType=DECIMAL}, #{aendMin,jdbcType=DECIMAL}, #{otherOaFlag,jdbcType=VARCHAR}, 
+      #{otherEmailFlag,jdbcType=VARCHAR}, #{otherSmsFlag,jdbcType=VARCHAR}, #{omonNoticeFlag,jdbcType=VARCHAR}, 
+      #{otueNoticeFlag,jdbcType=VARCHAR}, #{owedNoticeFlag,jdbcType=VARCHAR}, #{othuNoticeFlag,jdbcType=VARCHAR}, 
+      #{ofriNoticeFlag,jdbcType=VARCHAR}, #{osatNoticeFlag,jdbcType=VARCHAR}, #{osunNoticeFlag,jdbcType=VARCHAR}, 
+      #{ostartHour,jdbcType=DECIMAL}, #{ostartMin,jdbcType=DECIMAL}, #{oendHour,jdbcType=DECIMAL}, 
+      #{oendMin,jdbcType=DECIMAL}, #{passwordOaFlag,jdbcType=VARCHAR}, #{passwordEmailFlag,jdbcType=VARCHAR}, 
+      #{passwordSmsFlag,jdbcType=VARCHAR}, #{boeOaFlag,jdbcType=VARCHAR}, #{boeEmailFlag,jdbcType=VARCHAR}, 
+      #{boeSmsFlag,jdbcType=VARCHAR}, #{lockDate,jdbcType=TIMESTAMP}, #{feeTypeIds,jdbcType=VARCHAR}, 
+      #{feeTypeNames,jdbcType=VARCHAR}, #{tempFlag,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cbs.app.entity.FbpEmployees" >
+    insert into FBP.FBP_EMPLOYEES
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="employeeId != null" >
+        EMPLOYEE_ID,
+      </if>
+      <if test="lastUpdateDate != null" >
+        LAST_UPDATE_DATE,
+      </if>
+      <if test="lastUpdatedBy != null" >
+        LAST_UPDATED_BY,
+      </if>
+      <if test="creationDate != null" >
+        CREATION_DATE,
+      </if>
+      <if test="createdBy != null" >
+        CREATED_BY,
+      </if>
+      <if test="lastUpdateLogin != null" >
+        LAST_UPDATE_LOGIN,
+      </if>
+      <if test="employeeNumber != null" >
+        EMPLOYEE_NUMBER,
+      </if>
+      <if test="deptId != null" >
+        DEPT_ID,
+      </if>
+      <if test="jobId != null" >
+        JOB_ID,
+      </if>
+      <if test="checkUnit != null" >
+        CHECK_UNIT,
+      </if>
+      <if test="prodProjectId != null" >
+        PROD_PROJECT_ID,
+      </if>
+      <if test="costDeptId != null" >
+        COST_DEPT_ID,
+      </if>
+      <if test="currentCredit != null" >
+        CURRENT_CREDIT,
+      </if>
+      <if test="password != null" >
+        PASSWORD,
+      </if>
+      <if test="positionLevel != null" >
+        POSITION_LEVEL,
+      </if>
+      <if test="employeeType != null" >
+        EMPLOYEE_TYPE,
+      </if>
+      <if test="sourceSystem != null" >
+        SOURCE_SYSTEM,
+      </if>
+      <if test="shortName != null" >
+        SHORT_NAME,
+      </if>
+      <if test="exchangePersonFlag != null" >
+        EXCHANGE_PERSON_FLAG,
+      </if>
+      <if test="employeeGuid != null" >
+        EMPLOYEE_GUID,
+      </if>
+      <if test="synchFlag != null" >
+        SYNCH_FLAG,
+      </if>
+      <if test="useOaFlag != null" >
+        USE_OA_FLAG,
+      </if>
+      <if test="useEmailFlag != null" >
+        USE_EMAIL_FLAG,
+      </if>
+      <if test="useSmsFlag != null" >
+        USE_SMS_FLAG,
+      </if>
+      <if test="rejectSmsFlag != null" >
+        REJECT_SMS_FLAG,
+      </if>
+      <if test="monNoticeFlag != null" >
+        MON_NOTICE_FLAG,
+      </if>
+      <if test="tueNoticeFlag != null" >
+        TUE_NOTICE_FLAG,
+      </if>
+      <if test="wedNoticeFlag != null" >
+        WED_NOTICE_FLAG,
+      </if>
+      <if test="thuNoticeFlag != null" >
+        THU_NOTICE_FLAG,
+      </if>
+      <if test="friNoticeFlag != null" >
+        FRI_NOTICE_FLAG,
+      </if>
+      <if test="satNoticeFlag != null" >
+        SAT_NOTICE_FLAG,
+      </if>
+      <if test="sunNoticeFlag != null" >
+        SUN_NOTICE_FLAG,
+      </if>
+      <if test="startHour != null" >
+        START_HOUR,
+      </if>
+      <if test="startMin != null" >
+        START_MIN,
+      </if>
+      <if test="endHour != null" >
+        END_HOUR,
+      </if>
+      <if test="endMin != null" >
+        END_MIN,
+      </if>
+      <if test="oaAddress != null" >
+        OA_ADDRESS,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="mobilePhone != null" >
+        MOBILE_PHONE,
+      </if>
+      <if test="emailAddress != null" >
+        EMAIL_ADDRESS,
+      </if>
+      <if test="attributeCategory != null" >
+        ATTRIBUTE_CATEGORY,
+      </if>
+      <if test="attribute1 != null" >
+        ATTRIBUTE1,
+      </if>
+      <if test="attribute2 != null" >
+        ATTRIBUTE2,
+      </if>
+      <if test="attribute3 != null" >
+        ATTRIBUTE3,
+      </if>
+      <if test="attribute4 != null" >
+        ATTRIBUTE4,
+      </if>
+      <if test="attribute5 != null" >
+        ATTRIBUTE5,
+      </if>
+      <if test="attribute6 != null" >
+        ATTRIBUTE6,
+      </if>
+      <if test="attribute7 != null" >
+        ATTRIBUTE7,
+      </if>
+      <if test="attribute8 != null" >
+        ATTRIBUTE8,
+      </if>
+      <if test="attribute9 != null" >
+        ATTRIBUTE9,
+      </if>
+      <if test="attribute10 != null" >
+        ATTRIBUTE10,
+      </if>
+      <if test="isSynchRequired != null" >
+        IS_SYNCH_REQUIRED,
+      </if>
+      <if test="enabledFlag != null" >
+        ENABLED_FLAG,
+      </if>
+      <if test="sourceType != null" >
+        SOURCE_TYPE,
+      </if>
+      <if test="sourceReference != null" >
+        SOURCE_REFERENCE,
+      </if>
+      <if test="sysnceDate != null" >
+        SYSNCE_DATE,
+      </if>
+      <if test="idCard != null" >
+        ID_CARD,
+      </if>
+      <if test="approveOaFlag != null" >
+        APPROVE_OA_FLAG,
+      </if>
+      <if test="approveEmailFlag != null" >
+        APPROVE_EMAIL_FLAG,
+      </if>
+      <if test="approveSmsFlag != null" >
+        APPROVE_SMS_FLAG,
+      </if>
+      <if test="amonNoticeFlag != null" >
+        AMON_NOTICE_FLAG,
+      </if>
+      <if test="atueNoticeFlag != null" >
+        ATUE_NOTICE_FLAG,
+      </if>
+      <if test="awedNoticeFlag != null" >
+        AWED_NOTICE_FLAG,
+      </if>
+      <if test="athuNoticeFlag != null" >
+        ATHU_NOTICE_FLAG,
+      </if>
+      <if test="afriNoticeFlag != null" >
+        AFRI_NOTICE_FLAG,
+      </if>
+      <if test="asatNoticeFlag != null" >
+        ASAT_NOTICE_FLAG,
+      </if>
+      <if test="asunNoticeFlag != null" >
+        ASUN_NOTICE_FLAG,
+      </if>
+      <if test="astartHour != null" >
+        ASTART_HOUR,
+      </if>
+      <if test="astartMin != null" >
+        ASTART_MIN,
+      </if>
+      <if test="aendHour != null" >
+        AEND_HOUR,
+      </if>
+      <if test="aendMin != null" >
+        AEND_MIN,
+      </if>
+      <if test="otherOaFlag != null" >
+        OTHER_OA_FLAG,
+      </if>
+      <if test="otherEmailFlag != null" >
+        OTHER_EMAIL_FLAG,
+      </if>
+      <if test="otherSmsFlag != null" >
+        OTHER_SMS_FLAG,
+      </if>
+      <if test="omonNoticeFlag != null" >
+        OMON_NOTICE_FLAG,
+      </if>
+      <if test="otueNoticeFlag != null" >
+        OTUE_NOTICE_FLAG,
+      </if>
+      <if test="owedNoticeFlag != null" >
+        OWED_NOTICE_FLAG,
+      </if>
+      <if test="othuNoticeFlag != null" >
+        OTHU_NOTICE_FLAG,
+      </if>
+      <if test="ofriNoticeFlag != null" >
+        OFRI_NOTICE_FLAG,
+      </if>
+      <if test="osatNoticeFlag != null" >
+        OSAT_NOTICE_FLAG,
+      </if>
+      <if test="osunNoticeFlag != null" >
+        OSUN_NOTICE_FLAG,
+      </if>
+      <if test="ostartHour != null" >
+        OSTART_HOUR,
+      </if>
+      <if test="ostartMin != null" >
+        OSTART_MIN,
+      </if>
+      <if test="oendHour != null" >
+        OEND_HOUR,
+      </if>
+      <if test="oendMin != null" >
+        OEND_MIN,
+      </if>
+      <if test="passwordOaFlag != null" >
+        PASSWORD_OA_FLAG,
+      </if>
+      <if test="passwordEmailFlag != null" >
+        PASSWORD_EMAIL_FLAG,
+      </if>
+      <if test="passwordSmsFlag != null" >
+        PASSWORD_SMS_FLAG,
+      </if>
+      <if test="boeOaFlag != null" >
+        BOE_OA_FLAG,
+      </if>
+      <if test="boeEmailFlag != null" >
+        BOE_EMAIL_FLAG,
+      </if>
+      <if test="boeSmsFlag != null" >
+        BOE_SMS_FLAG,
+      </if>
+      <if test="lockDate != null" >
+        LOCK_DATE,
+      </if>
+      <if test="feeTypeIds != null" >
+        FEE_TYPE_IDS,
+      </if>
+      <if test="feeTypeNames != null" >
+        FEE_TYPE_NAMES,
+      </if>
+      <if test="tempFlag != null" >
+        TEMP_FLAG,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="employeeId != null" >
+        #{employeeId,jdbcType=DECIMAL},
+      </if>
+      <if test="lastUpdateDate != null" >
+        #{lastUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdatedBy != null" >
+        #{lastUpdatedBy,jdbcType=DECIMAL},
+      </if>
+      <if test="creationDate != null" >
+        #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=DECIMAL},
+      </if>
+      <if test="lastUpdateLogin != null" >
+        #{lastUpdateLogin,jdbcType=DECIMAL},
+      </if>
+      <if test="employeeNumber != null" >
+        #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="deptId != null" >
+        #{deptId,jdbcType=DECIMAL},
+      </if>
+      <if test="jobId != null" >
+        #{jobId,jdbcType=DECIMAL},
+      </if>
+      <if test="checkUnit != null" >
+        #{checkUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="prodProjectId != null" >
+        #{prodProjectId,jdbcType=DECIMAL},
+      </if>
+      <if test="costDeptId != null" >
+        #{costDeptId,jdbcType=DECIMAL},
+      </if>
+      <if test="currentCredit != null" >
+        #{currentCredit,jdbcType=DECIMAL},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="positionLevel != null" >
+        #{positionLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeType != null" >
+        #{employeeType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceSystem != null" >
+        #{sourceSystem,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null" >
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangePersonFlag != null" >
+        #{exchangePersonFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeGuid != null" >
+        #{employeeGuid,jdbcType=VARCHAR},
+      </if>
+      <if test="synchFlag != null" >
+        #{synchFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useOaFlag != null" >
+        #{useOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useEmailFlag != null" >
+        #{useEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useSmsFlag != null" >
+        #{useSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="rejectSmsFlag != null" >
+        #{rejectSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="monNoticeFlag != null" >
+        #{monNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="tueNoticeFlag != null" >
+        #{tueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="wedNoticeFlag != null" >
+        #{wedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="thuNoticeFlag != null" >
+        #{thuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="friNoticeFlag != null" >
+        #{friNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="satNoticeFlag != null" >
+        #{satNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sunNoticeFlag != null" >
+        #{sunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="startHour != null" >
+        #{startHour,jdbcType=DECIMAL},
+      </if>
+      <if test="startMin != null" >
+        #{startMin,jdbcType=DECIMAL},
+      </if>
+      <if test="endHour != null" >
+        #{endHour,jdbcType=DECIMAL},
+      </if>
+      <if test="endMin != null" >
+        #{endMin,jdbcType=DECIMAL},
+      </if>
+      <if test="oaAddress != null" >
+        #{oaAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilePhone != null" >
+        #{mobilePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="emailAddress != null" >
+        #{emailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="attributeCategory != null" >
+        #{attributeCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute1 != null" >
+        #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null" >
+        #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null" >
+        #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null" >
+        #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null" >
+        #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null" >
+        #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null" >
+        #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null" >
+        #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null" >
+        #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null" >
+        #{attribute10,jdbcType=VARCHAR},
+      </if>
+      <if test="isSynchRequired != null" >
+        #{isSynchRequired,jdbcType=VARCHAR},
+      </if>
+      <if test="enabledFlag != null" >
+        #{enabledFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null" >
+        #{sourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceReference != null" >
+        #{sourceReference,jdbcType=VARCHAR},
+      </if>
+      <if test="sysnceDate != null" >
+        #{sysnceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="approveOaFlag != null" >
+        #{approveOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="approveEmailFlag != null" >
+        #{approveEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="approveSmsFlag != null" >
+        #{approveSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="amonNoticeFlag != null" >
+        #{amonNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="atueNoticeFlag != null" >
+        #{atueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="awedNoticeFlag != null" >
+        #{awedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="athuNoticeFlag != null" >
+        #{athuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="afriNoticeFlag != null" >
+        #{afriNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="asatNoticeFlag != null" >
+        #{asatNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="asunNoticeFlag != null" >
+        #{asunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="astartHour != null" >
+        #{astartHour,jdbcType=DECIMAL},
+      </if>
+      <if test="astartMin != null" >
+        #{astartMin,jdbcType=DECIMAL},
+      </if>
+      <if test="aendHour != null" >
+        #{aendHour,jdbcType=DECIMAL},
+      </if>
+      <if test="aendMin != null" >
+        #{aendMin,jdbcType=DECIMAL},
+      </if>
+      <if test="otherOaFlag != null" >
+        #{otherOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otherEmailFlag != null" >
+        #{otherEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otherSmsFlag != null" >
+        #{otherSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="omonNoticeFlag != null" >
+        #{omonNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otueNoticeFlag != null" >
+        #{otueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="owedNoticeFlag != null" >
+        #{owedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="othuNoticeFlag != null" >
+        #{othuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="ofriNoticeFlag != null" >
+        #{ofriNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="osatNoticeFlag != null" >
+        #{osatNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="osunNoticeFlag != null" >
+        #{osunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="ostartHour != null" >
+        #{ostartHour,jdbcType=DECIMAL},
+      </if>
+      <if test="ostartMin != null" >
+        #{ostartMin,jdbcType=DECIMAL},
+      </if>
+      <if test="oendHour != null" >
+        #{oendHour,jdbcType=DECIMAL},
+      </if>
+      <if test="oendMin != null" >
+        #{oendMin,jdbcType=DECIMAL},
+      </if>
+      <if test="passwordOaFlag != null" >
+        #{passwordOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="passwordEmailFlag != null" >
+        #{passwordEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="passwordSmsFlag != null" >
+        #{passwordSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeOaFlag != null" >
+        #{boeOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeEmailFlag != null" >
+        #{boeEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeSmsFlag != null" >
+        #{boeSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lockDate != null" >
+        #{lockDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="feeTypeIds != null" >
+        #{feeTypeIds,jdbcType=VARCHAR},
+      </if>
+      <if test="feeTypeNames != null" >
+        #{feeTypeNames,jdbcType=VARCHAR},
+      </if>
+      <if test="tempFlag != null" >
+        #{tempFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cbs.app.entity.FbpEmployees" >
+    update FBP.FBP_EMPLOYEES
+    <set >
+      <if test="lastUpdateDate != null" >
+        LAST_UPDATE_DATE = #{lastUpdateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdatedBy != null" >
+        LAST_UPDATED_BY = #{lastUpdatedBy,jdbcType=DECIMAL},
+      </if>
+      <if test="creationDate != null" >
+        CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        CREATED_BY = #{createdBy,jdbcType=DECIMAL},
+      </if>
+      <if test="lastUpdateLogin != null" >
+        LAST_UPDATE_LOGIN = #{lastUpdateLogin,jdbcType=DECIMAL},
+      </if>
+      <if test="employeeNumber != null" >
+        EMPLOYEE_NUMBER = #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="deptId != null" >
+        DEPT_ID = #{deptId,jdbcType=DECIMAL},
+      </if>
+      <if test="jobId != null" >
+        JOB_ID = #{jobId,jdbcType=DECIMAL},
+      </if>
+      <if test="checkUnit != null" >
+        CHECK_UNIT = #{checkUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="prodProjectId != null" >
+        PROD_PROJECT_ID = #{prodProjectId,jdbcType=DECIMAL},
+      </if>
+      <if test="costDeptId != null" >
+        COST_DEPT_ID = #{costDeptId,jdbcType=DECIMAL},
+      </if>
+      <if test="currentCredit != null" >
+        CURRENT_CREDIT = #{currentCredit,jdbcType=DECIMAL},
+      </if>
+      <if test="password != null" >
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="positionLevel != null" >
+        POSITION_LEVEL = #{positionLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeType != null" >
+        EMPLOYEE_TYPE = #{employeeType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceSystem != null" >
+        SOURCE_SYSTEM = #{sourceSystem,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null" >
+        SHORT_NAME = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangePersonFlag != null" >
+        EXCHANGE_PERSON_FLAG = #{exchangePersonFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeGuid != null" >
+        EMPLOYEE_GUID = #{employeeGuid,jdbcType=VARCHAR},
+      </if>
+      <if test="synchFlag != null" >
+        SYNCH_FLAG = #{synchFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useOaFlag != null" >
+        USE_OA_FLAG = #{useOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useEmailFlag != null" >
+        USE_EMAIL_FLAG = #{useEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="useSmsFlag != null" >
+        USE_SMS_FLAG = #{useSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="rejectSmsFlag != null" >
+        REJECT_SMS_FLAG = #{rejectSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="monNoticeFlag != null" >
+        MON_NOTICE_FLAG = #{monNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="tueNoticeFlag != null" >
+        TUE_NOTICE_FLAG = #{tueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="wedNoticeFlag != null" >
+        WED_NOTICE_FLAG = #{wedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="thuNoticeFlag != null" >
+        THU_NOTICE_FLAG = #{thuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="friNoticeFlag != null" >
+        FRI_NOTICE_FLAG = #{friNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="satNoticeFlag != null" >
+        SAT_NOTICE_FLAG = #{satNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sunNoticeFlag != null" >
+        SUN_NOTICE_FLAG = #{sunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="startHour != null" >
+        START_HOUR = #{startHour,jdbcType=DECIMAL},
+      </if>
+      <if test="startMin != null" >
+        START_MIN = #{startMin,jdbcType=DECIMAL},
+      </if>
+      <if test="endHour != null" >
+        END_HOUR = #{endHour,jdbcType=DECIMAL},
+      </if>
+      <if test="endMin != null" >
+        END_MIN = #{endMin,jdbcType=DECIMAL},
+      </if>
+      <if test="oaAddress != null" >
+        OA_ADDRESS = #{oaAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilePhone != null" >
+        MOBILE_PHONE = #{mobilePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="emailAddress != null" >
+        EMAIL_ADDRESS = #{emailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="attributeCategory != null" >
+        ATTRIBUTE_CATEGORY = #{attributeCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute1 != null" >
+        ATTRIBUTE1 = #{attribute1,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute2 != null" >
+        ATTRIBUTE2 = #{attribute2,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute3 != null" >
+        ATTRIBUTE3 = #{attribute3,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute4 != null" >
+        ATTRIBUTE4 = #{attribute4,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute5 != null" >
+        ATTRIBUTE5 = #{attribute5,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute6 != null" >
+        ATTRIBUTE6 = #{attribute6,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute7 != null" >
+        ATTRIBUTE7 = #{attribute7,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute8 != null" >
+        ATTRIBUTE8 = #{attribute8,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute9 != null" >
+        ATTRIBUTE9 = #{attribute9,jdbcType=VARCHAR},
+      </if>
+      <if test="attribute10 != null" >
+        ATTRIBUTE10 = #{attribute10,jdbcType=VARCHAR},
+      </if>
+      <if test="isSynchRequired != null" >
+        IS_SYNCH_REQUIRED = #{isSynchRequired,jdbcType=VARCHAR},
+      </if>
+      <if test="enabledFlag != null" >
+        ENABLED_FLAG = #{enabledFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceType != null" >
+        SOURCE_TYPE = #{sourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceReference != null" >
+        SOURCE_REFERENCE = #{sourceReference,jdbcType=VARCHAR},
+      </if>
+      <if test="sysnceDate != null" >
+        SYSNCE_DATE = #{sysnceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="idCard != null" >
+        ID_CARD = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="approveOaFlag != null" >
+        APPROVE_OA_FLAG = #{approveOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="approveEmailFlag != null" >
+        APPROVE_EMAIL_FLAG = #{approveEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="approveSmsFlag != null" >
+        APPROVE_SMS_FLAG = #{approveSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="amonNoticeFlag != null" >
+        AMON_NOTICE_FLAG = #{amonNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="atueNoticeFlag != null" >
+        ATUE_NOTICE_FLAG = #{atueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="awedNoticeFlag != null" >
+        AWED_NOTICE_FLAG = #{awedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="athuNoticeFlag != null" >
+        ATHU_NOTICE_FLAG = #{athuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="afriNoticeFlag != null" >
+        AFRI_NOTICE_FLAG = #{afriNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="asatNoticeFlag != null" >
+        ASAT_NOTICE_FLAG = #{asatNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="asunNoticeFlag != null" >
+        ASUN_NOTICE_FLAG = #{asunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="astartHour != null" >
+        ASTART_HOUR = #{astartHour,jdbcType=DECIMAL},
+      </if>
+      <if test="astartMin != null" >
+        ASTART_MIN = #{astartMin,jdbcType=DECIMAL},
+      </if>
+      <if test="aendHour != null" >
+        AEND_HOUR = #{aendHour,jdbcType=DECIMAL},
+      </if>
+      <if test="aendMin != null" >
+        AEND_MIN = #{aendMin,jdbcType=DECIMAL},
+      </if>
+      <if test="otherOaFlag != null" >
+        OTHER_OA_FLAG = #{otherOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otherEmailFlag != null" >
+        OTHER_EMAIL_FLAG = #{otherEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otherSmsFlag != null" >
+        OTHER_SMS_FLAG = #{otherSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="omonNoticeFlag != null" >
+        OMON_NOTICE_FLAG = #{omonNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="otueNoticeFlag != null" >
+        OTUE_NOTICE_FLAG = #{otueNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="owedNoticeFlag != null" >
+        OWED_NOTICE_FLAG = #{owedNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="othuNoticeFlag != null" >
+        OTHU_NOTICE_FLAG = #{othuNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="ofriNoticeFlag != null" >
+        OFRI_NOTICE_FLAG = #{ofriNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="osatNoticeFlag != null" >
+        OSAT_NOTICE_FLAG = #{osatNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="osunNoticeFlag != null" >
+        OSUN_NOTICE_FLAG = #{osunNoticeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="ostartHour != null" >
+        OSTART_HOUR = #{ostartHour,jdbcType=DECIMAL},
+      </if>
+      <if test="ostartMin != null" >
+        OSTART_MIN = #{ostartMin,jdbcType=DECIMAL},
+      </if>
+      <if test="oendHour != null" >
+        OEND_HOUR = #{oendHour,jdbcType=DECIMAL},
+      </if>
+      <if test="oendMin != null" >
+        OEND_MIN = #{oendMin,jdbcType=DECIMAL},
+      </if>
+      <if test="passwordOaFlag != null" >
+        PASSWORD_OA_FLAG = #{passwordOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="passwordEmailFlag != null" >
+        PASSWORD_EMAIL_FLAG = #{passwordEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="passwordSmsFlag != null" >
+        PASSWORD_SMS_FLAG = #{passwordSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeOaFlag != null" >
+        BOE_OA_FLAG = #{boeOaFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeEmailFlag != null" >
+        BOE_EMAIL_FLAG = #{boeEmailFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="boeSmsFlag != null" >
+        BOE_SMS_FLAG = #{boeSmsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lockDate != null" >
+        LOCK_DATE = #{lockDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="feeTypeIds != null" >
+        FEE_TYPE_IDS = #{feeTypeIds,jdbcType=VARCHAR},
+      </if>
+      <if test="feeTypeNames != null" >
+        FEE_TYPE_NAMES = #{feeTypeNames,jdbcType=VARCHAR},
+      </if>
+      <if test="tempFlag != null" >
+        TEMP_FLAG = #{tempFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cbs.app.entity.FbpEmployees" >
+    update FBP.FBP_EMPLOYEES
+    set LAST_UPDATE_DATE = #{lastUpdateDate,jdbcType=TIMESTAMP},
+      LAST_UPDATED_BY = #{lastUpdatedBy,jdbcType=DECIMAL},
+      CREATION_DATE = #{creationDate,jdbcType=TIMESTAMP},
+      CREATED_BY = #{createdBy,jdbcType=DECIMAL},
+      LAST_UPDATE_LOGIN = #{lastUpdateLogin,jdbcType=DECIMAL},
+      EMPLOYEE_NUMBER = #{employeeNumber,jdbcType=VARCHAR},
+      DEPT_ID = #{deptId,jdbcType=DECIMAL},
+      JOB_ID = #{jobId,jdbcType=DECIMAL},
+      CHECK_UNIT = #{checkUnit,jdbcType=VARCHAR},
+      PROD_PROJECT_ID = #{prodProjectId,jdbcType=DECIMAL},
+      COST_DEPT_ID = #{costDeptId,jdbcType=DECIMAL},
+      CURRENT_CREDIT = #{currentCredit,jdbcType=DECIMAL},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      POSITION_LEVEL = #{positionLevel,jdbcType=VARCHAR},
+      EMPLOYEE_TYPE = #{employeeType,jdbcType=VARCHAR},
+      SOURCE_SYSTEM = #{sourceSystem,jdbcType=VARCHAR},
+      SHORT_NAME = #{shortName,jdbcType=VARCHAR},
+      EXCHANGE_PERSON_FLAG = #{exchangePersonFlag,jdbcType=VARCHAR},
+      EMPLOYEE_GUID = #{employeeGuid,jdbcType=VARCHAR},
+      SYNCH_FLAG = #{synchFlag,jdbcType=VARCHAR},
+      USE_OA_FLAG = #{useOaFlag,jdbcType=VARCHAR},
+      USE_EMAIL_FLAG = #{useEmailFlag,jdbcType=VARCHAR},
+      USE_SMS_FLAG = #{useSmsFlag,jdbcType=VARCHAR},
+      REJECT_SMS_FLAG = #{rejectSmsFlag,jdbcType=VARCHAR},
+      MON_NOTICE_FLAG = #{monNoticeFlag,jdbcType=VARCHAR},
+      TUE_NOTICE_FLAG = #{tueNoticeFlag,jdbcType=VARCHAR},
+      WED_NOTICE_FLAG = #{wedNoticeFlag,jdbcType=VARCHAR},
+      THU_NOTICE_FLAG = #{thuNoticeFlag,jdbcType=VARCHAR},
+      FRI_NOTICE_FLAG = #{friNoticeFlag,jdbcType=VARCHAR},
+      SAT_NOTICE_FLAG = #{satNoticeFlag,jdbcType=VARCHAR},
+      SUN_NOTICE_FLAG = #{sunNoticeFlag,jdbcType=VARCHAR},
+      START_HOUR = #{startHour,jdbcType=DECIMAL},
+      START_MIN = #{startMin,jdbcType=DECIMAL},
+      END_HOUR = #{endHour,jdbcType=DECIMAL},
+      END_MIN = #{endMin,jdbcType=DECIMAL},
+      OA_ADDRESS = #{oaAddress,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      MOBILE_PHONE = #{mobilePhone,jdbcType=VARCHAR},
+      EMAIL_ADDRESS = #{emailAddress,jdbcType=VARCHAR},
+      ATTRIBUTE_CATEGORY = #{attributeCategory,jdbcType=VARCHAR},
+      ATTRIBUTE1 = #{attribute1,jdbcType=VARCHAR},
+      ATTRIBUTE2 = #{attribute2,jdbcType=VARCHAR},
+      ATTRIBUTE3 = #{attribute3,jdbcType=VARCHAR},
+      ATTRIBUTE4 = #{attribute4,jdbcType=VARCHAR},
+      ATTRIBUTE5 = #{attribute5,jdbcType=VARCHAR},
+      ATTRIBUTE6 = #{attribute6,jdbcType=VARCHAR},
+      ATTRIBUTE7 = #{attribute7,jdbcType=VARCHAR},
+      ATTRIBUTE8 = #{attribute8,jdbcType=VARCHAR},
+      ATTRIBUTE9 = #{attribute9,jdbcType=VARCHAR},
+      ATTRIBUTE10 = #{attribute10,jdbcType=VARCHAR},
+      IS_SYNCH_REQUIRED = #{isSynchRequired,jdbcType=VARCHAR},
+      ENABLED_FLAG = #{enabledFlag,jdbcType=VARCHAR},
+      SOURCE_TYPE = #{sourceType,jdbcType=VARCHAR},
+      SOURCE_REFERENCE = #{sourceReference,jdbcType=VARCHAR},
+      SYSNCE_DATE = #{sysnceDate,jdbcType=TIMESTAMP},
+      ID_CARD = #{idCard,jdbcType=VARCHAR},
+      APPROVE_OA_FLAG = #{approveOaFlag,jdbcType=VARCHAR},
+      APPROVE_EMAIL_FLAG = #{approveEmailFlag,jdbcType=VARCHAR},
+      APPROVE_SMS_FLAG = #{approveSmsFlag,jdbcType=VARCHAR},
+      AMON_NOTICE_FLAG = #{amonNoticeFlag,jdbcType=VARCHAR},
+      ATUE_NOTICE_FLAG = #{atueNoticeFlag,jdbcType=VARCHAR},
+      AWED_NOTICE_FLAG = #{awedNoticeFlag,jdbcType=VARCHAR},
+      ATHU_NOTICE_FLAG = #{athuNoticeFlag,jdbcType=VARCHAR},
+      AFRI_NOTICE_FLAG = #{afriNoticeFlag,jdbcType=VARCHAR},
+      ASAT_NOTICE_FLAG = #{asatNoticeFlag,jdbcType=VARCHAR},
+      ASUN_NOTICE_FLAG = #{asunNoticeFlag,jdbcType=VARCHAR},
+      ASTART_HOUR = #{astartHour,jdbcType=DECIMAL},
+      ASTART_MIN = #{astartMin,jdbcType=DECIMAL},
+      AEND_HOUR = #{aendHour,jdbcType=DECIMAL},
+      AEND_MIN = #{aendMin,jdbcType=DECIMAL},
+      OTHER_OA_FLAG = #{otherOaFlag,jdbcType=VARCHAR},
+      OTHER_EMAIL_FLAG = #{otherEmailFlag,jdbcType=VARCHAR},
+      OTHER_SMS_FLAG = #{otherSmsFlag,jdbcType=VARCHAR},
+      OMON_NOTICE_FLAG = #{omonNoticeFlag,jdbcType=VARCHAR},
+      OTUE_NOTICE_FLAG = #{otueNoticeFlag,jdbcType=VARCHAR},
+      OWED_NOTICE_FLAG = #{owedNoticeFlag,jdbcType=VARCHAR},
+      OTHU_NOTICE_FLAG = #{othuNoticeFlag,jdbcType=VARCHAR},
+      OFRI_NOTICE_FLAG = #{ofriNoticeFlag,jdbcType=VARCHAR},
+      OSAT_NOTICE_FLAG = #{osatNoticeFlag,jdbcType=VARCHAR},
+      OSUN_NOTICE_FLAG = #{osunNoticeFlag,jdbcType=VARCHAR},
+      OSTART_HOUR = #{ostartHour,jdbcType=DECIMAL},
+      OSTART_MIN = #{ostartMin,jdbcType=DECIMAL},
+      OEND_HOUR = #{oendHour,jdbcType=DECIMAL},
+      OEND_MIN = #{oendMin,jdbcType=DECIMAL},
+      PASSWORD_OA_FLAG = #{passwordOaFlag,jdbcType=VARCHAR},
+      PASSWORD_EMAIL_FLAG = #{passwordEmailFlag,jdbcType=VARCHAR},
+      PASSWORD_SMS_FLAG = #{passwordSmsFlag,jdbcType=VARCHAR},
+      BOE_OA_FLAG = #{boeOaFlag,jdbcType=VARCHAR},
+      BOE_EMAIL_FLAG = #{boeEmailFlag,jdbcType=VARCHAR},
+      BOE_SMS_FLAG = #{boeSmsFlag,jdbcType=VARCHAR},
+      LOCK_DATE = #{lockDate,jdbcType=TIMESTAMP},
+      FEE_TYPE_IDS = #{feeTypeIds,jdbcType=VARCHAR},
+      FEE_TYPE_NAMES = #{feeTypeNames,jdbcType=VARCHAR},
+      TEMP_FLAG = #{tempFlag,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR}
+    where EMPLOYEE_ID = #{employeeId,jdbcType=DECIMAL}
+  </update>
+</mapper>
