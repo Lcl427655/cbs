@@ -4,26 +4,30 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cbs</groupId>
     <artifactId>app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>app</name>
-    <description>父级</description>
-
-    <!--<modules>
-        <module>mysql</module>
+    <packaging>pom</packaging>
+    <version>0.0.1-RELEASE</version>
+    <description>通用项目配置</description>
+    <!--子模块-->
+    <!--打包只需要执行mvn clean package,管理的module都会打成包-->
+    <modules>
+        <module>mysql-provider</module>
         <module>mysql-common</module>
-        <module>mysql-controller</module>
-    </modules>-->
+        <module>mysql-consumer</module>
+        <module>oracle</module>
+    </modules>
+    <!--spring-boot-starter-parent-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.0.RELEASE</version>
     </parent>
+    <!--JDK-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+    <!--依赖-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,12 +35,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--Gson-->
         <dependency>
@@ -56,6 +60,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
             <scope>provided</scope>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
         </dependency>
     </dependencies>
 </project>
