@@ -4,7 +4,9 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
+    <!--oracle-->
     <!--<properties resource="generator-oracle.properties"></properties>-->
+    <!--mariadb/mysql-->
     <properties resource="generator-mariadb.properties"></properties>
     <!--app 连接数据库jar 这里选择自己本地位置-->
     <classPathEntry location="${jdbc.driverLocation}"/>
@@ -64,6 +66,5 @@
         <!--生成带有Sample的文件-->
         <!--<table schema="wfr" tableName="wfr_bill_histories"></table>-->
         <table schema="cbs" tableName="country"></table>
-
     </context>
 </generatorConfiguration>

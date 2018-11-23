@@ -7,6 +7,7 @@
     <parent>
         <artifactId>app</artifactId>
         <groupId>com.cbs</groupId>
+        <!--需要指定父项目的版本-->
         <version>0.0.1-RELEASE</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
